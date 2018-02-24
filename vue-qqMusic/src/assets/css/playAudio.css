@@ -1,0 +1,57 @@
+.playConsole{
+    width: 26.78rem;
+    height: 6.71rem;
+    background: rgba(0,0,0,.85);
+    position:fixed;
+    bottom:0;
+    transition:all .5s ease;
+  }
+  .singer{
+    width: 5.5rem;
+    height:5.5rem;
+    border-radius:5px;
+    margin-top:0.6rem;
+    margin-left:0.38rem;
+  }
+  .pos_bot{
+    position:absolute;
+    width: 2.14rem;
+    height: 2.14rem;
+    top:0;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+  }
+  .playConsole_c{
+    float: left;
+  }
+  .name_public{
+    padding-left:0.7rem;
+  }
+  .songName{
+    color: #fff;
+    font-size: 1.14rem;
+    margin-top:1.6rem;
+  }
+  .singerName{
+    color: #888;
+  }
+  .control{
+    float: right;
+    margin-right: 1.42rem;
+  }
+  .control img{
+    width: 2.28rem;
+    height: 2.28rem;
+    margin-top:2.2rem;
+    
+  }
+  .p_length{
+    width: 14.14rem;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+  }
+  #transf{
+    transition:all .5s ease;
+  }
