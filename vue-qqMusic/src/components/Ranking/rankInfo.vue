@@ -1,16 +1,7 @@
 <template>
   <div id="rangInfo">
     <div id="Title" class="bTitle" :style="{backgroundImage: `url(${imgUrl})`}">
-      <div id="z-i">
-        <div class="topNavx">
-          <div @click="back()" class="goBack">
-            <img src="../../assets/image/goback_1.png" alt=""  />
-          </div>
-          <div class="song_name sizeSname">
-            <p>{{ specialname }}</p>
-          </div>
-        </div>
-      </div>
+	      
     </div>
     <div>
       <mt-cell v-for='(item,index) in songList' :key='index' :title="item.filename" @click.native='playAudio(index)'>
@@ -19,7 +10,8 @@
     </div>
     <div class="padd_bot" v-show='pb'></div>
   </div>
-  
+	  
+
 </template>
 
 <script>
@@ -37,12 +29,16 @@
     },
     mounted() {
       this.getList()
+      window.addEventListener('scroll',this.onscroll)
     },
     computed : {
       ...mapGetters (['audio','pb'])
     },
     methods :{
-      
+    //   onscroll (){
+    //   	var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+  		// console.log(scrollTop)
+    //   },
       back() {
         this.$router.back()
       },
@@ -62,6 +58,7 @@
           this.imgUrl = info.imgurl.replace('{size}', '400')
 //        this.desp = info.intro
 //        console.log(this.songList)
+		  this.$store.commit('setheadInfo',this.specialname)
         });
       }
     }
@@ -79,6 +76,7 @@
 
   #rangInfo{
     width: 100%;
+    /*position: relative;*/
     /*height: 1000px;*/
     /*overflow: hidden;*/
     /*position:absolute;
@@ -110,12 +108,5 @@
     width: 100%;
     height: 6.64rem;
   }
-  .topNavx{
-    width: 100%;
-    height: 3.85rem;
-    background:transparent;
-    position:relative;
-    top:0rem;
-    z-index: 10000;    
-  }
+
 </style>

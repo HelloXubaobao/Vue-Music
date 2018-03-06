@@ -1,6 +1,6 @@
 <template>
   <div id="ranking">
-    <mt-cell id="rangT" :to='`/Ranking/rankInfo/${item.specialid}`'  v-for='(item,index) in Ranklist' :title='item.specialname' :label="String(item.playcount)" :key='index'>
+    <mt-cell id="rangT" :to='`/Ranking/rankInfo/${item.specialid}`'  v-for='(item,index) in Ranklist' :title='item.specialname' :label="String(item.playcount)" :key='index' @click.native="changeHead">
       <img class="rIMg" slot="icon" :src="item.imgurl.replace('{size}','400')" width="60" height="60">
     </mt-cell>
   </div>
@@ -18,6 +18,9 @@
       this.getRank()
     },
     methods: {
+      changeHead (){
+        this.$store.commit('sethead',true)
+      },
       getRank() {
         Indicator.open({
           text: '加载中...',

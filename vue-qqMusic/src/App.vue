@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <my-nav></my-nav>
+    <head-nav></head-nav>
     <div class="main">
         <router-view class="animated bounceInLeft"/> 
     </div>   
@@ -12,6 +13,7 @@
 <script>
 import myNav from './components/mynav/maynav.vue'
 import playAudio from './components/playAudio'
+import headNav from './components/mynav/headNav.vue'
 import detailsPlay from './components/details'
 import '../static/js/rem.js'
 
@@ -21,7 +23,8 @@ export default{
 	components: {
 		myNav,
 		playAudio,
-		detailsPlay
+		detailsPlay,
+		headNav
 	},
 	mounted() {
 		window.onresize = function () {

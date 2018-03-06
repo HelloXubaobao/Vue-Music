@@ -8,4 +8,5 @@ ul{padding:0; margin:0; }
 html,body{ font:14px/1.8 'Microsoft YaHei',Tahoma,Verdana,'Simsun'; color:#57595B; -webkit-text-size-adjust:none;}
 a{ color:#57595B; text-decoration:none;}
 a:hover{ /*color:#50D7FF;*/ text-decoration:none;}
-.main{position:relative;top:6rem}
+.main{margin-top:6rem}
+

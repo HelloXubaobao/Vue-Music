@@ -8,7 +8,7 @@
           <img src="../assets/image/goback_1.png" alt=""  />
         </div>
         <div class="song_name">
-          <p>{{ audio.title }}</p>
+          <p class="sN">{{ audio.title }}</p>
         </div>
       </div>
       <div class="singerSD">

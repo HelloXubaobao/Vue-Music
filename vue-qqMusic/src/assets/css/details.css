@@ -1,6 +1,6 @@
   #detailsPlay{
     width: 26.78rem;
-    height: 47.64rem;
+    height: 100%;
     background: #26A2FF;
     position: fixed;
     top:0;
@@ -51,7 +51,7 @@
     
     padding-left: 0.3rem;
   }
-  .song_name p{
+  .song_name .sN{
     color: #fff;
     text-overflow:ellipsis;
     white-space:nowrap;

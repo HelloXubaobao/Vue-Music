@@ -24,7 +24,9 @@ const store = new Vuex.Store({
 		songListInfo:{
 		  list:[],
 		  songIndex:0
-		}
+		},
+		headInfo:'',
+		headDis:false
 	},
 	getters: {
 	  audio: state => state.audio,
@@ -59,16 +61,24 @@ const store = new Vuex.Store({
 		  state.isbot = sign
 		},
 		setHeadStyle(state, style){
-      state.head.style = style
-    },
+     		state.head.style = style
+   		},
 		setCurrent:(state, flag) =>{
-      state.audio.currentFlag = flag
-    },
+        	state.audio.currentFlag = flag
+   		},
 		setDetails: (state,sign) => {
 		  state.details = sign
 		},
 		setAudioTime: (state,time) => {
 		  state.audio.currentLength = time
+		},
+		setheadInfo: (state,headInfo) => {
+			state.headInfo = headInfo
+			
+		},
+		sethead: (state,head) => {
+			state.headDis = head
+			
 		}
 	},
 	actions:{
