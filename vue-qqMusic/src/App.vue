@@ -23,6 +23,33 @@ export default{
 		playAudio,
 		detailsPlay
 	},
+	mounted() {
+		window.onresize = function () {
+			var clientWidth = 375;		/* 标准视口宽度 */
+			var fontSize = 14;			/* 标准HTML元素大小 */
+
+			// // 当前设备下的视口宽度
+			// window.onload = function(){
+			// 	// 获取html元素
+				let html = document.documentElement;
+				// console.log(html)
+
+			// 	// 当前设备可视窗口宽度
+				let nowClientWidth = html.clientWidth;
+				// console.log(nowClientWidth)
+
+			// 	// 计算出当前设备下html元素的font-size
+			// 	//fontSize/clientWidth = newFontSize/nowClientWidth
+				var newFontSize = nowClientWidth*fontSize/clientWidth;
+
+				// console.log(newFontSize);
+
+			// 	// 设置html元素的fontSize
+				html.style.fontSize = newFontSize+'px';
+			// }
+			console.log('gaibianle')
+		}
+	},
 	methods: {
 		
 	},
