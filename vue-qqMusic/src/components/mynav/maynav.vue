@@ -8,9 +8,9 @@
 		  </div>
 		</div>
 		<div class="typeNav">
-		    <router-link to='/Recommend'>推荐</router-link>
+		    <router-link to='/Recommend' @click.native="changeHeads">推荐</router-link>
 		    <router-link to='/Ranking'>推荐歌单</router-link>
-		    <router-link to='/search'>搜索</router-link>
+		    <router-link to='/search' @click.native="changeHeads">搜索</router-link>
 		</div>
 	</div>
 
@@ -19,7 +19,13 @@
 	export default{
 		computed: {
 			
+		},
+		methods : {
+			changeHeads () {
+				this.$store.commit('sethead',false)
+			}
 		}
+
 	}
 </script>
 <style scoped>

@@ -78,7 +78,7 @@ const store = new Vuex.Store({
 		},
 		sethead: (state,head) => {
 			state.headDis = head
-			
+			console.log(head)
 		}
 	},
 	actions:{

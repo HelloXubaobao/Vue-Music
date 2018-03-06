@@ -37,6 +37,7 @@
       },
       ...mapState(['headDis'])
     }
+
   }
 </script>
 
